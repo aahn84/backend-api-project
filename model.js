@@ -38,7 +38,7 @@ function createBook(name, borrowed, description, authors) {
   }
 
   books.push(newBook)
-  // fs.writeFileSync(filePath, JSON.stringify(books))
+  fs.writeFileSync(filePath, JSON.stringify(books))
 
   return newBook;
 }
@@ -55,13 +55,8 @@ function updateBook(id, name, borrowed, description, authors) {
   book.name = name
   book.description = description
   book.authors = authors
-  // book.authors = authors.map(author => {
-  //   {
-  //     first_name: author.first_name,
-  //     last_name: author.last_name
-  //   }
-  // })
-  // fs.writeFileSync(filePath, JSON.stringify(books))
+
+  fs.writeFileSync(filePath, JSON.stringify(books))
 
   return book;
 }
@@ -78,7 +73,7 @@ function deleteBook(id) {
 
   const index = books.indexOf(book)
   books.splice(index, 1)
-  // fs.writeFileSync(filePath, JSON.stringify(books))
+  fs.writeFileSync(filePath, JSON.stringify(books))
 
   return book;
 }
@@ -127,7 +122,7 @@ function createAuthor(id, first_name, last_name) {
     last_name: last_name
   }
   authors.push(newAuthor)
-  // fs.writeFileSync(filePath, JSON.stringify(books))
+  fs.writeFileSync(filePath, JSON.stringify(books))
 
   return newAuthor;
 }
@@ -143,7 +138,7 @@ function updateAuthor(id, authId, first_name, last_name) {
 
   author.first_name = first_name,
   author.last_name = last_name
-  // fs.writeFileSync(filePath, JSON.stringify(books))
+  fs.writeFileSync(filePath, JSON.stringify(books))
 
   return author;
 }
@@ -165,7 +160,7 @@ function deleteAuthor(id, authId) {
 
   const index = authors.indexOf(authId)
   authors.splice(index, 1)
-  // fs.writeFileSync(filePath, JSON.stringify(books))
+  fs.writeFileSync(filePath, JSON.stringify(books))
 
   return author;
 }
